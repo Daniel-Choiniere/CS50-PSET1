@@ -1,3 +1,7 @@
+// ask the user for the amount of change owed
+//   check to see if the user submits a valid amount
+    // return the least number of coins needed to make the correct change
+
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
