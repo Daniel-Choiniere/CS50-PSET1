@@ -15,23 +15,27 @@ int main(void) {
     }
 //         if user enters a negative number re ask for the amount of change due
     while (change <= 0);
-//      printf("%f\n", change);
 //         round the change off into a whole number
         cents = round(change * 100);
-//         printf("%i\n", cents);
-    
+  
         counter = 0;
         while ((cents / 25) > 0) {
             cents -= 25;
             counter++;
         }
-        remainder = cents % 25;
-        printf("%i\n", remainder);
-//         printf("%i\n", counter);
-        while ((remainder / 10) > 0) {
+        while ((cents / 10) > 0) {
             cents -= 10;
             counter++;
         }
+        while ((cents / 5) > 0) {
+            cents -= 5;
+            counter++;
+        }
+        while ((cents / 1) > 0) {
+            cents -= 1;
+            counter++;
+        }
+    
+    
         printf("%i\n", counter);
-        printf("%i\n", cents);
-}        
+}   
